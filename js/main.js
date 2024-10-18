@@ -11,11 +11,16 @@
     };
     loader();
     
-    
-    // Initiate the wowjs
-    new WOW().init();
-    
-    
+    // Initiate WOW.js
+    var wow = new WOW({
+        boxClass: 'wow', // default
+        animateClass: 'animated', // default
+        offset: 0, // default
+        mobile: true, // default
+        live: true // default
+    });
+    wow.init(); // Inicializar WOW antes de GSAP
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {
@@ -29,7 +34,6 @@
         return false;
     });
     
-    
     // Sticky Navbar
     $(window).scroll(function () {
         if ($(this).scrollTop() > 0) {
@@ -38,7 +42,6 @@
             $('.navbar').removeClass('nav-sticky');
         }
     });
-    
     
     // Smooth scrolling on the navbar links
     $(".navbar-nav a").on('click', function (event) {
@@ -56,7 +59,6 @@
         }
     });
     
-    
     // Typed Initiate
     if ($('.hero .hero-text h2').length == 1) {
         var typed_strings = $('.hero .hero-text .typed-text').text();
@@ -69,14 +71,12 @@
         });
     }
     
-    
     // Skills
     $('.skills').waypoint(function () {
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
-
 
     // Testimonials carousel
     $(".testimonials-carousel").owlCarousel({
@@ -91,8 +91,6 @@
         }
     });
     
-    
-    
     // Portfolio filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
@@ -105,39 +103,65 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
 
-    // index.js
-console.clear();
+    // GSAP Section
+    gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
+    window.addEventListener("load", () => {
+        gsap.timeline({
+            scrollTrigger: {
+                trigger: ".wrapper",
+                start: "top top",
+                end: "+=150%",
+                pin: true,
+                scrub: true,
+                markers: true
+            }
+        })
+        .to("img", {
+            scale: 2,
+            z: 350,
+            transformOrigin: "center center",
+            ease: "power1.inOut"
+        })
+        .to(".section.hero", {
+            scale: 1.1,
+            transformOrigin: "center center",
+            ease: "power1.inOut"
+        }, "<");
 
-window.addEventListener("load", () => {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".wrapper",
-      start: "top top",
-      end: "+=150%",
-      pin: true,
-      scrub: true,
-      markers: true
-    }
-  })
-  .to("img", {
-    scale: 2,
-    z: 350,
-    transformOrigin: "center center",
-    ease: "power1.inOut"
-  })
-  .to(
-    ".section.hero",
-    {
-      scale: 1.1,
-      transformOrigin: "center center",
-      ease: "power1.inOut"
-    },
-    "<"
-  );
-});
+        // Agregar animaciones adicionales para tus secciones que usan WOW.js
+        gsap.from(".experience .wow.zoomIn", {
+            scrollTrigger: {
+                trigger: ".experience",
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            },
+            opacity: 0,
+            scale: 0.5,
+            duration: 1
+        });
 
-    
+        gsap.from(".timeline-item.left", {
+            scrollTrigger: {
+                trigger: ".timeline-item.left",
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            },
+            x: -100,
+            opacity: 0,
+            duration: 1
+        });
+
+        gsap.from(".timeline-item.right", {
+            scrollTrigger: {
+                trigger: ".timeline-item.right",
+                start: "top 90%",
+                toggleActions: "play none none reverse"
+            },
+            x: 100,
+            opacity: 0,
+            duration: 1
+        });
+    });
+
 })(jQuery);
-

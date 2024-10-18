@@ -600,6 +600,7 @@ a:focus {
     border: 2px solid #71C0EB;
     border-radius: 16px;
     z-index: 1;
+    background: #71C0EB;
 }
 
 .experience .timeline .timeline-item.right::after {
