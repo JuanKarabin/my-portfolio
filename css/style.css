@@ -1647,3 +1647,15 @@ a:focus {
 .gsap-marker-scroller-end {
   display: none !important;
 }
+
+.title-with-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 26px;
+    height: auto;
+    margin: 0px 25px 10px 10px;
+}
+
