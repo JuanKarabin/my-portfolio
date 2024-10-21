@@ -943,11 +943,16 @@ a:focus {
     margin: 45px 0;
     padding: 90px 0;
     background: #71C0EB;
+    background-image: url('../img/fondito.png');
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 
 .banner .container {
     max-width: 70%;
     text-align: center;
+    z-index: 2;
 }
 
 .banner .section-header {
