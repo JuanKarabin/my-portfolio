@@ -429,7 +429,7 @@ a:focus {
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    background: #ffffff;
+    /*background: #ffffff;*/
 }
 
 .section-header p::before {
@@ -439,8 +439,8 @@ a:focus {
     top: 11px;
     right: 0;
     left: -30px;
-    background: #71C0EB;
-    z-index: -1;
+    /*background: #71C0EB;
+    z-index: -1;*/
 }
 
 .section-header p::after {
@@ -731,7 +731,28 @@ a:focus {
 .service {
     position: relative;
     width: 100%;
-    padding: 45px 0 15px 0;
+    padding: 60px 0 0px 0;
+}
+
+.service::before {
+    content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/Sol_de_Mayo_Bandera_Argentina.png');
+  background-position: center;
+  background-size: 375px 375px;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.service .container {
+    position: relative;
+    z-index: 2; 
 }
 
 .service .service-item {
@@ -741,6 +762,7 @@ a:focus {
     align-items: center;
     box-shadow: inset 0 0 0 0 transparent;
     transition: ease-out 0.5s;
+    
 }
 
 .service .service-item:hover {
@@ -924,7 +946,7 @@ a:focus {
 }
 
 .banner .container {
-    max-width: 750px;
+    max-width: 70%;
     text-align: center;
 }
 
@@ -1311,7 +1333,7 @@ a:focus {
 }
 
 .contact .container-fluid {
-    background: url(../img/yoBRC.jpg) left center no-repeat;
+    background: url(../img/me_2.png) left center no-repeat;
     background-size: contain;
 }
 
@@ -1659,3 +1681,21 @@ a:focus {
     margin: 0px 25px 10px 10px;
 }
 
+.img-web{
+    transform: none !important;
+    height: 260px !important;
+}
+
+.btn-custom {
+    margin-right: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom i {
+    /*font-size: 20px;  Tamaño de ícono */
+}
+
+.btn-custom:hover {
+    background-color: #f0f0f0; /* Fondo en hover */
+    color: #333; /* Color del ícono en hover */
+}
