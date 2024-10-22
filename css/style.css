@@ -1696,11 +1696,36 @@ a:focus {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-custom i {
-    /*font-size: 20px;  Tamaño de ícono */
+.btn-custom:hover {
+    background-color: #f0f0f0; 
+    color: #333; 
 }
 
-.btn-custom:hover {
-    background-color: #f0f0f0; /* Fondo en hover */
-    color: #333; /* Color del ícono en hover */
-}
+/*--------------------------------------------------------------
+# Cliens
+--------------------------------------------------------------*/
+.cliens {
+    padding: 15px 0;
+    text-align: center;
+    background: #0000000f;
+    margin: -45px 0 0 0;  
+  }
+  
+  .cliens img {
+    max-width: 45%;
+    transition: all 0.4s ease-in-out;
+    display: inline-block;
+    padding: 15px 0;
+    filter: grayscale(100);
+  }
+  
+  .cliens img:hover {
+    filter: none;
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .cliens img {
+      max-width: 40%;
+    }
+  }
