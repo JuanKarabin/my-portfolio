@@ -405,7 +405,12 @@
                                     <div class="contact-form">
                                         <h2 style="color: #fff;font-weight: bold;font-size: 40px;text-transform: uppercase;">Contact Me</h2>
                                         <div id="success"></div>
-                                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                        <form name="sentMessage" id="contactForm" novalidate="novalidate" method="POST" netlify netlify-honeypot="bot-field">
+                                            <p style="display: none;">
+                                                <label>
+                                                  Don't fill this out if you're human: <input name="bot-field" />
+                                                </label>
+                                              </p>
                                             <div class="control-group">
                                                 <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
                                                 <p class="help-block"></p>
