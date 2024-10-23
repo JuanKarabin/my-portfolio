@@ -1,10 +1,36 @@
 /*******************************/
 /********* General CSS *********/
 /*******************************/
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     color: #797979;
     background: #ffffff;
     font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    overflow-x: hidden; 
+}
+
+span{
+    font-weight: bold;
+}
+
+.xp-links{
+    font-weight: bold;
+    color: #797979;
+}
+
+.xp-links:hover{
+    font-weight: bold;
+    color: #fff;
 }
 
 h1,
@@ -745,7 +771,7 @@ a:focus {
   background-position: center;
   background-size: 375px 375px;
   background-repeat: no-repeat;
-  opacity: 0.2;
+  opacity: 0.14;
   z-index: 1;
   margin-top: 20px;
 }
@@ -806,7 +832,7 @@ a:focus {
 
 .service .service-text p {
     margin: 0;
-    font-size: 16px;
+    font-size: 19px;
     transition: 1s;
 }
 
@@ -913,6 +939,7 @@ a:focus {
     margin: 0 0 0 15px;
     white-space: nowrap;
     overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .portfolio .portfolio-text a.btn {
@@ -933,6 +960,31 @@ a:focus {
     border-color: #71C0EB;
 }
 
+@media (max-width: 575.98px) {
+    .portfolio .portfolio-text {
+        height: auto; 
+        width: 100%;
+        margin: 15px 0;
+        padding: 10px;
+    }
+
+    .portfolio .portfolio-text h3 {
+        font-size: 16px;
+        width: 100%;
+        white-space: normal; 
+    }
+
+    .portfolio .portfolio-text a.btn {
+        width: 40px; 
+        height: 40px;
+        font-size: 30px;
+    }
+
+    .portfolio .portfolio-img img {
+        transform: none;
+    }
+}
+
 
 /*******************************/
 /********* Banner CSS **********/
@@ -948,9 +1000,8 @@ a:focus {
     background-repeat: no-repeat;
 }
 
-
 .banner .container {
-    max-width: 70%;
+    max-width: 76%;
     text-align: center;
     z-index: 2;
 }
@@ -978,7 +1029,7 @@ a:focus {
 }
 
 .banner .banner-text p {
-    font-size: 18px;
+    font-size: 22px;
     color: #ffffff;
 }
 
@@ -995,6 +1046,27 @@ a:focus {
     box-shadow: inset 0 0 0 0 #ffffff;
     border-color: #ffffff;
 }
+
+/* Media query para pantallas móviles */
+@media (max-width: 575.98px) {
+    .banner .container {
+        max-width: 100%; /* Ocupar todo el ancho de la pantalla */
+        padding: 0 20px; /* Añadir padding para que no toque los bordes */
+    }
+
+    .banner .section-header h2 span {
+        font-size: 30px; /* Ajustar el tamaño del texto */
+    }
+
+    .banner .banner-text p {
+        font-size: 16px; /* Reducir el tamaño del texto para mejor legibilidad */
+    }
+
+    .banner {
+        padding: 60px 0; /* Reducir el padding para móviles */
+    }
+}
+
 
 
 /*******************************/
@@ -1344,7 +1416,7 @@ a:focus {
 
 .contact .contact-form {
     position: relative;
-    padding: 90px 0 90px 45px;
+    padding: 55px 0 55px 55px;
     background: #71C0EB;
 }
 
