@@ -177,7 +177,7 @@
                         <div class="container banner-text">
                             <p>
                                 I am passionate about constantly learning anything that helps me grow and improve as a professional. <br> <br>
-                                The most important technologies I work with include: Angular, Ionic, Node.js, HTML, CSS, JavaScript, SQL, MySQL, Sequelize, Bootstrap, Git & GitHub, among others.
+                                The most important technologies I work with include: Angular, Ionic, Node.js, HTML, CSS, JavaScript, MySQL, Sequelize, Bootstrap, Git & GitHub, among others.
                                 <br><br>
                                 In addition to my technical skills, I possess strong soft skills such as Proactivity, Empathy, Responsibility, Adaptability, Teamwork, and Analytical Thinking.
                             </p>
@@ -232,7 +232,7 @@
                     <div class="container">
                         <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
                             <p>My Portfolio</p>
-                            <h2>My Projects</h2>
+                            <h2>Client Websites Currently in Use</h2>
                         </div>
                         <div class="row">
                             <div class="col-12">
@@ -254,10 +254,10 @@
                                     </div>
                                     <div class="portfolio-text">
                                         <h3>Olivia Pizzas & Empanadas</h3>
-                                        <a class="btn btn-custom" href="https://www.oliviapizzas.com.ar" target="_blank">
+                                        <a class="btn btn-custom-web" href="https://www.oliviapizzas.com.ar" target="_blank">
                                             <i class="fas fa-globe"></i>
                                         </a>
-                                        <a class="btn btn-custom" href="https://github.com/JuanKarabin/olivia-kalli" target="_blank">
+                                        <a class="btn btn-custom-git" href="https://github.com/JuanKarabin/olivia-kalli" target="_blank">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     </div>
@@ -270,10 +270,10 @@
                                     </div>
                                     <div class="portfolio-text">
                                         <h3>Freelo Finanzas</h3>
-                                        <a class="btn btn-custom" href="https://www.freelofinanzas.com.ar" target="_blank">
+                                        <a class="btn btn-custom-web" href="https://www.freelofinanzas.com.ar" target="_blank">
                                             <i class="fas fa-globe"></i>
                                         </a>
-                                        <a class="btn btn-custom" href="https://github.com/JuanKarabin/seo-dream-kalli-desarrollo" target="_blank">
+                                        <a class="btn btn-custom-git" href="https://github.com/JuanKarabin/seo-dream-kalli-desarrollo" target="_blank">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     </div>
@@ -286,10 +286,10 @@
                                     </div>
                                     <div class="portfolio-text">
                                         <h3>Officeasy</h3>
-                                        <a class="btn btn-custom" href="https://www.officeasy.com.ar" target="_blank">
+                                        <a class="btn btn-custom-web" href="https://www.officeasy.com.ar" target="_blank">
                                             <i class="fas fa-globe"></i>
                                         </a>
-                                        <a class="btn btn-custom" href="https://github.com/Kallidigital/officeasy" target="_blank">
+                                        <a class="btn btn-custom-git" href="https://github.com/Kallidigital/officeasy" target="_blank">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     </div>
@@ -302,10 +302,10 @@
                                     </div>
                                     <div class="portfolio-text">
                                         <h3>Kalli Digital</h3>
-                                        <a class="btn btn-custom" href="https://www.kallidigital.com.ar" target="_blank">
+                                        <a class="btn btn-custom-web" href="https://www.kallidigital.com.ar" target="_blank">
                                             <i class="fas fa-globe"></i>
                                         </a>
-                                        <a class="btn btn-custom" href="https://github.com/JuanKarabin/kalli-web" target="_blank">
+                                        <a class="btn btn-custom-git" href="https://github.com/JuanKarabin/kalli-web" target="_blank">
                                             <i class="fab fa-github"></i>
                                         </a>
                                     </div>
@@ -346,7 +346,7 @@
                                     </div>
                                     <h4>Tecnología y Desarrollo Informático</h4>
                                     <p>
-                                        I provided support and maintenance for the Tax Administration system of the province of Neuquén
+                                        Support and maintenance provided for the Tax Administration system of the province of Neuquén
                                     </p>
                                 </div>
                             </div>
@@ -400,32 +400,36 @@
                     <div class="container-fluid">
                         <div class="container">
                             <div class="row align-items-center">
-                                <div class="col-md-4"></div>
-                                <div class="col-md-8">
+                                <div class="col-md-5"></div>
+                                <div class="col-md-7">
                                     <div class="contact-form">
                                         <h2 style="color: #fff;font-weight: bold;font-size: 40px;text-transform: uppercase;">Contact Me</h2>
                                         <div id="success"></div>
-                                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                        <form name="sentMessage" id="contactForm" netlify netlify-honeypot="bot-field">
+                                            <p style="display: none;">
+                                               <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                                            </p>
                                             <div class="control-group">
-                                                <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                                <p class="help-block"></p>
+                                               <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required" />
+                                               <p class="help-block"></p>
                                             </div>
                                             <div class="control-group">
-                                                <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                                <p class="help-block"></p>
+                                               <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required="required" />
+                                               <p class="help-block"></p>
                                             </div>
                                             <div class="control-group">
-                                                <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                                <p class="help-block"></p>
+                                               <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="required" />
+                                               <p class="help-block"></p>
                                             </div>
                                             <div class="control-group">
-                                                <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                                <p class="help-block"></p>
+                                               <textarea class="form-control" id="message" name="message" placeholder="Message" required="required"></textarea>
+                                               <p class="help-block"></p>
                                             </div>
                                             <div>
-                                                <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                               <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
                                             </div>
-                                        </form>
+                                         </form>
+                                         <div id="success"></div>
                                     </div>
                                 </div>
                             </div>
@@ -433,6 +437,8 @@
                     </div>
                 </div>
                 <!-- Contact End -->
+
+                <p style="text-align: center;margin: 0.5%;/*! padding: 0; */">Thanks for visit my Website!</p>
 
                 <!-- Footer Start -->
                 <div class="footer wow fadeIn" data-wow-delay="0.3s">

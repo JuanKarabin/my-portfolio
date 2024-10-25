@@ -61,7 +61,7 @@ a:focus {
 }
 
 .container-fluid {
-    max-width: 1366px;
+    max-width: 70%;
 }
 
 .btn {
@@ -272,7 +272,7 @@ a:focus {
     position: relative;
     width: 100%;
     margin-bottom: 45px;
-    padding: 120px 0 0 0;
+    padding: 100px 0 20px 0;
     overflow: hidden;
     background: linear-gradient(rgba(113, 192, 235, 0.90), rgba(113, 192, 235, 0.90)), url(../img/image.png);
     background-position: center;
@@ -302,6 +302,7 @@ a:focus {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    padding-bottom: 70px;
 }
 
 .hero .hero-text p {
@@ -313,7 +314,7 @@ a:focus {
 
 .hero .hero-text h1 {
     color: #ffffff;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
     letter-spacing: 3px;
     margin-bottom: 15px;
@@ -953,12 +954,6 @@ a:focus {
     font-weight: 100;
 }
 
-.portfolio .portfolio-item:hover a.btn {
-    color: #71C0EB;
-    background: transparent;
-    box-shadow: inset 0 0 0 0 #71C0EB;
-    border-color: #71C0EB;
-}
 
 @media (max-width: 575.98px) {
     .portfolio .portfolio-text {
@@ -998,6 +993,7 @@ a:focus {
     background-image: url('../img/fondito.png');
     background-position: center;
     background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .banner .container {
@@ -1047,23 +1043,23 @@ a:focus {
     border-color: #ffffff;
 }
 
-/* Media query para pantallas móviles */
 @media (max-width: 575.98px) {
     .banner .container {
-        max-width: 100%; /* Ocupar todo el ancho de la pantalla */
-        padding: 0 20px; /* Añadir padding para que no toque los bordes */
+        max-width: 100%; 
+        padding: 0 20px; 
     }
 
     .banner .section-header h2 span {
-        font-size: 30px; /* Ajustar el tamaño del texto */
+        font-size: 30px; 
     }
 
     .banner .banner-text p {
-        font-size: 16px; /* Reducir el tamaño del texto para mejor legibilidad */
+        font-size: 16px;
     }
 
     .banner {
-        padding: 60px 0; /* Reducir el padding para móviles */
+        padding: 60px 0;
+        background-image: none;
     }
 }
 
@@ -1405,13 +1401,13 @@ a:focus {
 .contact {
     position: relative;
     width: 100%;
-    margin: 45px 0;
+    margin: 45px 0 0 0;
     background: #71C0EB;
 }
 
 .contact .container-fluid {
     background: url(../img/me_2.png) left center no-repeat;
-    background-size: contain;
+    background-size: 40%;
 }
 
 .contact .contact-form {
@@ -1564,7 +1560,6 @@ a:focus {
 /*******************************/
 .footer {
     position: relative;
-    margin-top: 45px;
     background: #71C0EB;
 }
 
@@ -1763,15 +1758,27 @@ a:focus {
     height: 260px !important;
 }
 
-.btn-custom {
+.btn-custom-web {
     margin-right: 15px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-custom:hover {
+.btn-custom-web:hover {
     background-color: #f0f0f0; 
-    color: #333; 
+    color: #71C0EB; 
 }
+
+.btn-custom-git {
+    margin-right: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-custom-git:hover {
+    background-color: #f0f0f0; 
+    color: #71C0EB; 
+}
+
+
 
 /*--------------------------------------------------------------
 # Cliens
