@@ -169,4 +169,10 @@
         });
     });
 
+    document.querySelectorAll('.btn-custom-web, .btn-custom-git').forEach(button => {
+        button.addEventListener('click', function() {
+            setTimeout(() => button.blur(), 100);
+        });
+    });
+
 })(jQuery);
