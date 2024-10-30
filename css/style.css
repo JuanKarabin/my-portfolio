@@ -274,7 +274,7 @@ a:focus {
     margin-bottom: 45px;
     padding: 100px 0 20px 0;
     overflow: hidden;
-    background: linear-gradient(rgba(113, 192, 235, 0.90), rgba(113, 192, 235, 0.90)), url(../img/image.png);
+    background: linear-gradient(rgba(113, 192, 235, 0.90), rgba(113, 192, 235, 0.90)), url(../img/image.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -769,7 +769,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../img/Sol_de_Mayo_Bandera_Argentina.png');
+  background-image: url('../img/Sol_de_Mayo_Bandera_Argentina.webp');
   background-position: center;
   background-size: 375px 375px;
   background-repeat: no-repeat;
@@ -991,7 +991,7 @@ a:focus {
     margin: 45px 0;
     padding: 90px 0;
     background: #71C0EB;
-    background-image: url('../img/fondito.png');
+    background-image: url('../img/fondito.webp');
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1407,7 +1407,7 @@ a:focus {
 }
 
 .contact .container-fluid {
-    background: url(../img/me_2.png) left center no-repeat;
+    background: url(../img/me_2.webp) left center no-repeat;
     background-size: 40%;
 }
 
